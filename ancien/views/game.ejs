@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/game.css">
+  <title>Game</title>
+
+ 
+</head>
+  <body>
+    <script type="module" src="../public/js/jeu.js" >
+      
+    </script>
+
+    <div class="compteur">
+      <p>Votre argent : <span id="argent" class="argent"></span></p>
+    </div>
+
+    <button id="achmer" onclick="Merguezazor.usine()">Acheter Merguezazor</button>
+    <div id="boutons-caches" style="display:none;">
+      <button class="vendre" id="bouton-gain"   onclick="Merguezazor.vendre()">vendre €</button>
+      <button class="ameliorer" id="bouton-up"  onclick="Merguezazor.ameliorerGain()">Améliorer</button>
+      <button id="achmana" onclick="Merguezazor.manager()">Acheter Manager pour 45💶</button>
+    <div id="boutons-caches2" style="display:none;">
+      <button id="bouton-mana"   onclick="Merguezazor.manager()"> rentabilité du Manager:</button>
+    </div>
+    </div>
+   
+    
+
+  </body>
+</html>
