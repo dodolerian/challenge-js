@@ -1,4 +1,0 @@
-# challenge-js
-mini-jeu
-
-
