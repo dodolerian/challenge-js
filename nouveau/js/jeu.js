@@ -7,3 +7,4 @@ export class Entreprise {
         this.managerOn = false
     }
 }
+

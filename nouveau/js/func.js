@@ -1,12 +1,21 @@
 import { Entreprise } from "./jeu.js";
-const Merguezazor = new Entreprise(10, 1, 1.25, 45)
-const Beuhnoie = new Entreprise(50, 3, 8.68, 150)
+
+const Merguezazor = new Entreprise(99, 1, 1.25, 405)
+const Beuhnoie = new Entreprise(5000, 18, 12.68, 6500)
+const Pharmashit = new Entreprise(270000, 47, 47.57, 35080)
+const Pisteaulait = new Entreprise(18530000, 93, 136.17, 415000)
+
 let argent = 100
-// localStorage.setItem("argent", argent)
-// localStorage.setItem("gain", Entreprise.gain)
-// localStorage.setItem("prixUp", Entreprise.prixUp)
-// console.log(localStorage)
- document.getElementById("argent").innerHTML = argent
+// let credit = 10000
+// let prixbonus =1000
+let managervalue = 0.65
+
+
+
+ document.getElementById("argent").innerHTML = argent + " 💶";
+//  document.getElementById("credit").innerHTML = credit + " 🪙";
+
+//  
 
 
 //////////////////////////////////////////////////////////////////////////!
@@ -20,12 +29,11 @@ document.getElementById('bouton-gain-Merguezazor').addEventListener('click', () 
     vendre(Merguezazor, document.getElementById("bouton-gain-Merguezazor"), document.getElementById("bouton-up-Merguezazor"))
 })
 document.getElementById('achmana-Merguezazor').addEventListener('click', () => {
-    manager(Merguezazor, document.getElementById("bouton-mana-Merguezazor"), document.getElementById("achmana-Merguezazor"), document.getElementById("boutons-caches2-Merguezazor"), document.getElementById("bouton-gain-Merguezazor"))
+    manager(Merguezazor, document.getElementById("bouton-mana-Merguezazor"), document.getElementById("achmana-Merguezazor"), document.getElementById("boutons-caches2-Merguezazor"), document.getElementById("bouton-gain-Merguezazor"),document.getElementById("bouton-up-Merguezazor"))
 })
 
 document.getElementById('bouton-up-Merguezazor').addEventListener('click', () => {
-    ameliorerGain(Merguezazor, document.getElementById('bouton-gain-Merguezazor'), document.getElementById('bouton-Up-Merguezazor'), document.getElementById("bouton-mana-Merguezazor"))
-    document.getElementById("argent").innerHTML = argent
+    ameliorerGain(Merguezazor, document.getElementById('bouton-gain-Merguezazor') , document.getElementById('bouton-up-Merguezazor'), document.getElementById("bouton-mana-Merguezazor"))
 })
 
 //////////////////////////////////////////////////////////////////////////!
@@ -39,98 +47,150 @@ document.getElementById('bouton-gain-Beuhnoie').addEventListener('click', () => 
     vendre(Beuhnoie, document.getElementById("bouton-gain-Beuhnoie"), document.getElementById("bouton-up-Beuhnoie"))
 })
 document.getElementById('achmana-Beuhnoie').addEventListener('click', () => {
-    manager(Beuhnoie, document.getElementById("bouton-mana-Beuhnoie"), document.getElementById("achmana-Beuhnoie"), document.getElementById("boutons-caches2-Beuhnoie"), document.getElementById("Bouton-gain-Beuhnoie"))
+    manager(Beuhnoie, document.getElementById("bouton-mana-Beuhnoie"), document.getElementById("achmana-Beuhnoie"), document.getElementById("boutons-caches2-Beuhnoie"), document.getElementById("Bouton-gain-Beuhnoie"),document.getElementById("bouton-up-Beuhnoie"))
 })
 
 document.getElementById('bouton-up-Beuhnoie').addEventListener('click', () => {
-    ameliorerGain(Beuhnoie, document.getElementById('bouton-gain-Beuhnoie'), document.getElementById('bouton-Up-Beuhnoie'), document.getElementById("bouton-mana-Beuhnoie"))
-    
-    
+    ameliorerGain(Beuhnoie, document.getElementById("bouton-gain-Beuhnoie"), document.getElementById("bouton-up-Beuhnoie"), document.getElementById("bouton-mana-Beuhnoie"))
+})
+
+//////////////////////////////////////////////////////////////////////////!
+//?Pharmashit//?  
+//////////////////////////////////////////////////////////////////////////!
+
+document.getElementById('achmer-Pharmashit').addEventListener('click', () => {
+    usine(document.getElementById("boutons-caches-Pharmashit"), document.getElementById("achmer-Pharmashit"), document.getElementById("bouton-gain-Pharmashit"), document.getElementById("bouton-up-Pharmashit"), Pharmashit)
+})
+document.getElementById('bouton-gain-Pharmashit').addEventListener('click', () => {
+    vendre(Pharmashit, document.getElementById("bouton-gain-Pharmashit"), document.getElementById("bouton-up-Pharmashit"))
+})
+document.getElementById('achmana-Pharmashit').addEventListener('click', () => {
+    manager(Pharmashit, document.getElementById("bouton-mana-Pharmashit"), document.getElementById("achmana-Pharmashit"), document.getElementById("boutons-caches2-Pharmashit"), document.getElementById("Bouton-gain-Pharmashit"),document.getElementById("bouton-up-Pharmashit"))
+})
+
+document.getElementById('bouton-up-Pharmashit').addEventListener('click', () => {
+    ameliorerGain(Pharmashit, document.getElementById("bouton-gain-Pharmashit"), document.getElementById("bouton-up-Pharmashit"), document.getElementById("bouton-mana-Pharmashit"))
+})
+
+//////////////////////////////////////////////////////////////////////////!
+//?Pisteaulait//?  
+//////////////////////////////////////////////////////////////////////////!
+
+document.getElementById('achmer-Pisteaulait').addEventListener('click', () => {
+    usine(document.getElementById("boutons-caches-Pisteaulait"), document.getElementById("achmer-Pisteaulait"), document.getElementById("bouton-gain-Pisteaulait"), document.getElementById("bouton-up-Pisteaulait"), Pisteaulait)
+})
+document.getElementById('bouton-gain-Pisteaulait').addEventListener('click', () => {
+    vendre(Pisteaulait, document.getElementById("bouton-gain-Pisteaulait"), document.getElementById("bouton-up-Pisteaulait"))
+})
+document.getElementById('achmana-Pisteaulait').addEventListener('click', () => {
+    manager(Pisteaulait, document.getElementById("bouton-mana-Pisteaulait"), document.getElementById("achmana-Pisteaulait"), document.getElementById("boutons-caches2-Pisteaulait"), document.getElementById("bouton-gain-Pisteaulait"),document.getElementById("bouton-up-Pisteaulait"))
+})
+
+document.getElementById('bouton-up-Pisteaulait').addEventListener('click', () => {
+    ameliorerGain(Pisteaulait, document.getElementById('bouton-gain-Pisteaulait') , document.getElementById('bouton-up-Pisteaulait'), document.getElementById("bouton-mana-Pisteaulait"))
 })
 
 //////////////////////////////////////////////////////////////////////////!
 
 function usine(BoutonCaches, achmer, BoutonGain, BoutonUp, Entreprise) {
-    argent -= Entreprise.prixAchat
-    BoutonCaches.style.display = "block";
-    achmer.style.display = "none";
-    document.getElementById("argent").innerHTML = format(argent) + " 💶";
-    BoutonGain.innerHTML = "vendre" + format(Entreprise.gain) + " 💶";
-    BoutonUp.innerHTML = "ameliorer" + format(Entreprise.prixUp) + " 💶";
-    storage(argent,prixUp,gain)
+    if(argent>Entreprise.prixAchat){
+        argent -= Entreprise.prixAchat
+        BoutonCaches.style.display = "block";
+        achmer.style.display = "none";
+        document.getElementById("argent").innerHTML = format(argent) + " 💶";
+        BoutonGain.innerHTML ="vendre " + format(Entreprise.gain) + " 💶";
+        BoutonUp.innerHTML ="ameliorer " + format(Entreprise.prixUp) + " 💶";
+    }else{
+        alert ("tu n'as pas asser, vas bosser")
+    }
+   
 }
 
-function vendre(Entreprise, BoutonGain, ButtonUp) {
-    argent += Entreprise.gain
+function vendre(Entreprise, BoutonGain, BoutonUp,IsManager=false ) {
+    if(!IsManager){
+        argent+=Entreprise.gain
+    }else{
+        argent +=Entreprise.gain*managervalue
+    }
+    
+    
     document.getElementById("argent").innerHTML = format(argent) + " 💶";
-    BoutonGain.innerHTML = "vendre" + format(Entreprise.gain) + " 💶";
-    ButtonUp.innerHTML = "ameliorer" + format(Entreprise.prixUp) + " 💶";
-    storage(argent,prixUp,gain)
-
+    BoutonGain.innerHTML ="vendre: " + format(Entreprise.gain) + " 💶";
+    BoutonUp.innerHTML ="ameliorer: " + format(Entreprise.prixUp) + " 💶";
 }
 
-function manager(Entreprise, BoutonMana, achmana, BoutonCache2, BoutonGain) {
+function manager(Entreprise, BoutonMana, achmana, BoutonCache2, BoutonGain, BoutonUp) {
 
-    BoutonMana.innerHTML = "gain passif:" + format(Entreprise.gain);
-
+    
+    BoutonMana.innerHTML = format(Entreprise.gain*managervalue) +" de gain passif" ;
     if (argent > Entreprise.PrixManager && !Entreprise.managerOn) {
         argent = argent - Entreprise.PrixManager
         achmana.style.display = "none";
         BoutonCache2.style.display = "block";
         document.getElementById("argent").innerHTML = format(argent) + " 💶";
         Entreprise.managerOn = true
-        managerLoop()
-
+        managerLoop(Entreprise, BoutonGain, BoutonUp)
     } else {
         console.log("pas argent")
-        BoutonGain.innerHTML = "vendre" + format(Merguezazor.gain) + " 💶";
+        BoutonGain.innerHTML = "vendre: " + format(Entreprise.gain) + " 💶";
     }
-    storage(argent,prixUp,gain)
 }
 
-function ameliorerGain(Entreprise, BoutonGain, BoutonUp, BoutonMana) {
-
+function ameliorerGain(Entreprise, BoutonGain,BoutonUp, BoutonMana) {
+    console.log(BoutonMana)
     if (argent > Entreprise.prixUp) {
         Entreprise.gain *= 1.15
         argent = argent - Entreprise.prixUp
+        // document.getElementById("credit").innerHTML = format(credit) + " 💶";
         document.getElementById("argent").innerHTML = format(argent) + " 💶";
-        BoutonGain.innerHTML = "vendre" + format(Entreprise.gain) + " 💶";
-        Entreprise.prixUp *= 1.25
-        BoutonUp.innerHTML = "ameliorer" + format(Entreprise.prixUp) + " 💶";
-        BoutonMana.innerHTML = format(Entreprise.gain) + "click par sec";
-        BoutonUp.innerHTML = "ameliorer" + format(Entreprise.prixUp) + " 💶";
+        BoutonGain.innerHTML = "vendre: " + format(Entreprise.gain) + " 💶";
+        Entreprise.prixUp *= 1.27
+        BoutonMana.innerHTML = format(Entreprise.gain*managervalue) + " de gain passif";
+        BoutonUp.innerHTML ="ameliorer: " + format(Entreprise.prixUp) + " 💶";
+        console.log("la")
+        // credit++
+        // document.getElementById("credit").innerHTML = format(credit) + " 🪙";
+        // console.log(credit)
+        
+        
 
     } else {
-        BoutonUp.innerHTML = "ameliorer" + format(Entreprise.prixUp) + " 💶";
+        BoutonUp.innerHTML = "ameliorer: " + format(Entreprise.prixUp) + " 💶";
         console.log("pas argent")
-        BoutonGain.innerHTML = "vendre" + format(Entreprise.gain) + " 💶";
+        BoutonGain.innerHTML = "vendre: " + format(Entreprise.gain) + " 💶";
     }
-    storage(argent,prixUp,gain)
 }
 
- function managerLoop() {
-     setInterval(Entreprise.vendre(), 500);
+
+
+
+ function managerLoop(Entreprise, BoutonGain, BoutonUp) {
+    setInterval(() =>{vendre(Entreprise, BoutonGain, BoutonUp,true)}, 700);
+    console.log("test");
     document.getElementById("argent").innerHTML = format(argent) + " 💶";
+    
  }
+ 
+//  function bonus(){
+//     if(credit>=prixbonus){
+//         credit-=prixbonus
+//         managervalue+=0.07
+//         console.log(managervalue)
+//     }else{
+//         alert ("tu n'as pas asser, vas bosser")
+//     }
+//  }
+ 
+
+
+
 
 function format(argent) {
-    //console.log(typeof argent);
-    if (argent < 1000) {
-        //console.log(typeof argent,"dqsd")
-        return (argent.toFixed(2))
+    
+    if (argent < 100) {
+        return parseInt(argent).toFixed(2); //ou 2 
     } else {
-        return (argent.toFixed(0))
+        return parseInt(argent).toFixed(0);
     }
 }
 
-// function storage(argent,prixUp,gain) {
-//     let argentactu= localStorage.getItem("argent")
-//     argentactu= argent
-//     localStorage.setItem("argent",argentactu)
-//     let puactu= localStorage.getItem("prixUp")
-//     puactu=prixUp
-//     localStorage.setItem("prixUp",puactu)
-//     let gactu= localStorage.getItem("gain")
-//     gactu=gain
-//     localStorage.setItem("gain",gactu)
-// }

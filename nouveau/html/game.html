@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/nouveau/css/game.css">
+    <link rel="stylesheet" href="/nouveau/css/button.css">
     <title>Game</title>
     <script type="module" src="../js/func.js" defer></script>
 
@@ -14,30 +15,89 @@
 
 <body>
 
+    <div id="pop" class="pop">
+        <p><b> <u></u> Bienvenue sur RACAILLE TYCOON</b><br><br>
+            Dans ce jeu vous incarnerez le personnage de <b>DYLAN </b> un jeune vendeur de merguez qui sombre petit a petit dans la délinquance. <br><br>
+            Vous commencez avec ses economies pour ouvrir un stand de vente merguez puis avec la monté en puissance de ce commerce vous pourrez embaucher un employé afin de diriger l'entreprise sans avoir a vendre par vous meme. <br> <br> Vous pourrez aussi ouvrir d'autre entreprises pour un total de 4, toutes avec les memes caractéristique.<br><br>
+            Dylan a soif d'argent, vous aussi alors allez-y !!! <br><br><br>
+        </p>
+     <input type="button" class="bpop" value="LET'S GO!!! " onclick="masquer_pop('pop');" />
+    </div>
+    <script>
+                function masquer_pop(pop){
+                    if (document.getElementById(pop).style.display == 'none')
+                    {
+                        document.getElementById(pop).style.display = 'block';
+                    }
+                    else
+                    {
+                        document.getElementById(pop).style.display = 'none';
+                    }
+                }
+                </script>
+               
 
-    <div class="entete">
-        <p>Votre argent : <span id="argent" class="argent"></span></p>
-        <button class="reload">RECOMMENCER</button>
-    </div>
+    <canvas id="myCanvas" ></canvas>
+    <main>
+            <header>
+                <p id="argent" class="argent"></p>
+                <!-- <p id="credit" class="credit" ></p> -->
+                <a class="reload" href="/nouveau/html/index.html">
+                    RECOMMENCER
+                </a>    
+            </header>
+            
+            <div class="entreprises">
+                <button class="acheterMerguezazor" id="achmer-Merguezazor">Merguezazor <p>100💶</p></button>
+                <div class="boutons-caches-Merguezazor" id="boutons-caches-Merguezazor" style="display:none;">
+                    <button class="vendreM" id="bouton-gain-Merguezazor">vendre </button>
+                    <button class="ameliorerM" id="bouton-up-Merguezazor">Améliorer </button>
+                    <button class="achmana-Merguezazor" id="achmana-Merguezazor">Manager pour: 405 💶</button>
+                    <div id="boutons-caches2-Merguezazor" style="display:none; ">
+                        <p  class="bouton-mana-Merguezazor" id="bouton-mana-Merguezazor" > rentabilité du Manager:</p>
+                    </div>
+                    
+                </div>
+                <button class="acheterBeuhnoie" id="achmer-Beuhnoie">Beuhnoie <p>5 000💶</p></button>
+                <div id="boutons-caches-Beuhnoie" style="display:none;">
+                    <button class="vendreB" id="bouton-gain-Beuhnoie">vendre €</button>
+                    <button class="ameliorerB" id="bouton-up-Beuhnoie">Améliorer</button>
+                    <button class="achmana-Beuhnoie" id="achmana-Beuhnoie">Manager pour 6 500 💶</button>
+                    <div id="boutons-caches2-Beuhnoie" style="display:none;">
+                        <p  class="bouton-mana-Beuhnoie" id="bouton-mana-Beuhnoie" > rentabilité du Manager:</p>
+                    </div>
+                </div>
 
-    <button class="acheterMerguezazor" id="achmer-Merguezazor">Acheter Merguezazor</button>
-    <div id="boutons-caches-Merguezazor" style="display:none;">
-        <button class="vendre" id="bouton-gain-Merguezazor">vendre €</button>
-        <button class="ameliorer" id="bouton-up-Merguezazor">Améliorer</button>
-        <button id="achmana-Merguezazor">Acheter Manager pour 💶</button>
-        <div id="boutons-caches2-Merguezazor" style="display:none; ">
-            <button id="bouton-mana-Merguezazor"> rentabilité du Manager:</button>
-        </div>
-    </div>
-    <button class="acheterBeuhnoie" id="achmer-Beuhnoie">Acheter Beuhnoie</button>
-    <div id="boutons-caches-Beuhnoie" style="display:none;">
-        <button class="vendre" id="bouton-gain-Beuhnoie">vendre €</button>
-        <button class="ameliorer" id="bouton-up-Beuhnoie">Améliorer</button>
-        <button id="achmana-Beuhnoie">Acheter Manager pour 💶</button>
-        <div id="boutons-caches2-Beuhnoie" style="display:none;">
-            <button id="bouton-mana-Beuhnoie"> rentabilité du Manager:</button>
-        </div>
-    </div>
+                <button class="acheterPharmashit" id="achmer-Pharmashit">Pharmashit <p>270 000💶</p></button>
+                <div id="boutons-caches-Pharmashit" style="display:none;">
+                    <button class="vendreP" id="bouton-gain-Pharmashit">vendre €</button>
+                    <button class="ameliorerP" id="bouton-up-Pharmashit">Améliorer</button>
+                    <button class="achmana-Pharmashit" id="achmana-Pharmashit">Manager pour 35 080 💶</button>
+                    <div class="boutons-caches2-Pharmashit" id="boutons-caches2-Pharmashit" style="display:none; ">
+                        <p class="bouton-mana-Pharmashit" id="bouton-mana-Pharmashit"> rentabilité du Manager:</p>
+                    </div>
+                </div>
+
+                <button class="acheterPisteaulait" id="achmer-Pisteaulait">Pisteaulait <p>18 530 000💶</p></button>
+                <div id="boutons-caches-Pisteaulait" style="display:none;">
+                    <button class="vendrePI" id="bouton-gain-Pisteaulait">vendre €</button>
+                    <button class="ameliorerPI" id="bouton-up-Pisteaulait">Améliorer</button>
+                    <button class="achmana-Pisteaulait" id="achmana-Pisteaulait">Manager pour 415 000 💶</button>
+                    <div id="boutons-caches2-Pisteaulait" style="display:none; ">
+                        <p class="bouton-mana-Pisteaulait" id="bouton-mana-Pisteaulait"> rentabilité du Manager:</p>
+                    </div>
+                </div> 
+                
+                <!-- <div>
+                    <script src="/nouveau/js/func.js" type="module"></script>
+                    <button class="bonus" src="/nouveau/js/func.js"  onclick="bonus()">Bonus</button>
+                </div> -->
+
+        </main>
+
+    
+
+    
 
 
 

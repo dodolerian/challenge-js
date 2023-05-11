@@ -1,0 +1,135 @@
+.boutons-caches-Merguezazor{
+  margin-left: 50%;
+  margin-top: 8%;
+}
+.vendreM{
+  margin-top: 8%;
+  background-color: greenyellow;
+  border-radius: 6px;
+  border: black 1px solid;
+  padding: 2px;
+  font-size: 1rem;
+}
+.ameliorerM{
+  background-color: orange;
+  border-radius: 6px;
+  border: black 1px solid;
+  padding: 2px;
+  font-size: 1rem;
+}
+.achmana-Merguezazor{ 
+  background-color: plum;
+  border-radius: 6px;
+  border: black 1px solid;
+  padding: 2px;
+  font-size: 1rem;
+}
+
+.bouton-mana-Merguezazor{
+
+  color: aqua;
+}
+
+/* //////////////////////////////////////////////// */
+
+.boutons-caches-Beuhnoie{
+  margin-left: 50%;
+  margin-top: 10%;
+}
+.vendreB{
+  margin-top: 5.5%;
+  margin-left: 50%;
+  background-color: greenyellow;
+  border-radius: 6px;
+  border: black 1px solid;
+  padding: 2px;
+  font-size: 1rem;
+}
+.ameliorerB{
+  background-color: orange;
+  border-radius: 6px;
+  border: black 1px solid;
+  padding: 2px;
+  font-size: 1rem;
+}
+.achmana-Beuhnoie{ 
+  background-color: plum;
+  border-radius: 6px;
+  border: black 1px solid;
+  padding: 2px;
+  font-size: 1rem;
+}
+
+.bouton-mana-Beuhnoie{
+  margin-left: 50%;
+  color: aqua;
+}
+
+/* //////////////////////////////////////////////// */
+.vendreP{
+  margin-left: 50%;
+  margin-top: 6%;
+  background-color: greenyellow;
+  border-radius: 6px;
+  border: black 1px solid;
+  padding: 2px;
+  font-size: 1rem;
+}
+.ameliorerP{
+  margin-top: 6%;
+  background-color: orange;
+  border-radius: 6px;
+  border: black 1px solid;
+  padding: 2px;
+  font-size: 1rem;
+}
+.achmana-Pharmashit{
+  background-color: plum;
+  border-radius: 6px;
+  border: black 1px solid;
+  padding: 2px;
+  font-size: 1rem;
+}
+
+.bouton-mana-Pharmashit{
+  margin-left: 50%;
+  color: aqua;
+}
+
+/* //////////////////////////////////////////////// */
+.vendrePI{
+  margin-left: 50%;
+  margin-top: 3%;
+  background-color: greenyellow;
+  border-radius: 6px;
+  border: black 1px solid;
+  padding: 2px;
+  font-size: 1rem;
+}
+.ameliorerPI{
+  margin-top: 6%;
+  background-color: orange;
+  border-radius: 6px;
+  border: black 1px solid;
+  padding: 2px;
+  font-size: 1rem;
+}
+.achmana-Pisteaulait{
+  
+  background-color: plum;
+  border-radius: 6px;
+  border: black 1px solid;
+  padding: 2px;
+  font-size: 1rem;
+}
+
+.bouton-mana-Pisteaulait{
+  margin-left: 50%;
+  color: aqua;
+}
+
+/* //////////////////////////////////////////////// */
+
+.bonus{
+  background-color: green;
+}

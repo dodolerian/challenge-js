@@ -1,46 +1,180 @@
-body {
-    width: 100%;
-    height: 100%;
+* {
     margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+canvas{
+    width:100%;
+    height:99vh;
     background: url(/nouveau/img/map.png) no-repeat center fixed black;
-    /* background-position: 0;
-    background-size: 85%; */
+    background-size: cover;
 }
 
-.argent {
-    margin-left: 5%;
-    margin-right: 5%;
-    color: chocolate;
-    background-color: aqua;
+main{
+    width:100%;
+    height:100vh;
+    position: absolute;
+    top: 0;
 }
 
-.entete {
-    background-color: whitesmoke;
-    border-radius: 4px;
-    margin-left: 0%;
-    margin-right: 90%;
-    color: goldenrod;
-    left: 500px;
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+.argent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(234, 202, 161);
+    border-radius: 6px;
+    border: black 2px solid;
+    padding: 4px;
+    font-size: 1.7rem;
+    color: rgb(214, 98, 16);
 }
 
-.reload {
-    color: blue
+.credit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(234, 202, 161);
+    border-radius: 6px;
+    border: black 2px solid;
+    padding: 4px;
+    font-size: 1.7rem;
+    color: rgb(214, 98, 16);
+}
+
+.reload:hover{
+    background-color: red;
+}
+
+.reload{
+    font-size: 1.5rm;
+    border: black 1px solid;
+    color: black;
+    text-align: center;
+    background-color: crimson;
+    padding: 4px;
+    border-radius: 6px;
+    
+}
+
+/* --- End Header ---*/
+
+/* --- Entreprises ---*/
+
+.pop{
+    font-family: Courier New, monospace;
+    color: rgb(43, 42, 42);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    padding: 4px;
+    border: black 2px solid;
+    background-color: burlywood;
+}
+
+.bpop:hover{
+    background-color: rgb(219, 127, 219);
+}
+
+.bpop{
+    font-size: 20px;
+    background-color: plum ;
+    padding: 8px;
+    border-radius: 6px;
+    border: black 1px solid;
+    margin-bottom: 15px;
+    
+    
+    
+}
+
+.acheterMerguezazor:hover{
+    background-color: rgb(255, 183, 0);
 }
 
 .acheterMerguezazor {
+    border-radius: 6px;
+    border: black 1px solid;
+    padding: 4px;
+    font-size: 1.5rem;
+    color: chocolate;
     margin-left: 50%;
-    margin-top: 16%;
+    margin-top: 10.5%;
     background-color: goldenrod;
-    border-color: goldenrod;
     color: black;
     border-radius: 4px;
 }
 
+.acheterBeuhnoie:hover{
+    background-color: rgb(255, 183, 0);
+}
+
 .acheterBeuhnoie {
+    border-radius: 6px;
+    border: black 1px solid;
+    padding: 4px;
+    font-size: 1.5rem;
+    color: chocolate;
     margin-left: 50%;
-    margin-top: 6%;
+    margin-top: 4%;
     background-color: goldenrod;
-    border-color: goldenrod;
     color: black;
     border-radius: 4px;
 }
+
+.acheterPharmashit:hover{
+    background-color: rgb(255, 183, 0);
+}
+
+
+.acheterPharmashit {
+    border-radius: 6px;
+    border: black 1px solid;
+    padding: 4px;
+    font-size: 1.5rem;
+    color: chocolate;
+    margin-left: 50%;
+    margin-top: 4%;
+    background-color: goldenrod;
+    color: black;
+    border-radius: 4px;
+}
+
+.acheterPisteaulait:hover{
+    background-color: rgb(255, 183, 0);
+}
+
+.acheterPisteaulait{
+    border-radius: 6px;
+    border: black 1px solid;
+    padding: 4px;
+    font-size: 1.5rem;
+    color: chocolate;
+    margin-left: 50%;
+    margin-top: 4%;
+    background-color: goldenrod;
+    color: black;
+    border-radius: 4px;
+}
+
